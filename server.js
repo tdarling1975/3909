@@ -14,6 +14,9 @@ app.get("/", (req, res) => {
         <body>
             <h1>Hello from Terry's server!</h1>
             <p>This page is being served by Node.js and Express.</p>
+           
+            
+
         </body>
         </html>
     `);
@@ -22,3 +25,9 @@ app.get("/", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server listening on port ${PORT}`);
 }); 
+
+app.get('/api/getName', (req, res) => {
+                    res.set('Access-Control-Allow-Origin', '*');
+                    res.json({ name: 'Tractors' });
+                });
+
